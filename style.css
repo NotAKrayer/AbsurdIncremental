@@ -1,0 +1,17 @@
+.body {
+	background-color: black;
+}
+
+.line {
+	background-color:white;
+}
+
+.nothingGen {
+    width: 550px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+}
