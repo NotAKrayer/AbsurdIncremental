@@ -15,3 +15,16 @@
 	border-radius: 10px;
 	cursor: default;
 }
+
+.nothingGen2 {
+	display: none;
+    width: 550px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 10px;
+}
