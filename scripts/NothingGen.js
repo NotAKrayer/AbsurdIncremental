@@ -136,7 +136,6 @@ function GameSave() {
 		gen1get: gen1get
 	};
 	localStorage.setItem("saveGame", JSON.stringify(saveGame));
-	console.log("Saved!")
 }
 
 function lkGame() {
