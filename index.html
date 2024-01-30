@@ -1,16 +1,18 @@
 <html>
 	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5"> <!--Строчка, которая делает магию-->
 	<title>Absurd Incremental</title>
 	</head>
 	
 	<script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2/dist/break_infinity.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/NothingGen.js"></script>
+	<script src="scripts/save.js"></script>
 	<link rel="stylesheet" href="style.css"></link>
 	
 	<body class="body">
 		<p><font size="6" color="white">Absurd Incremental v0.2</font></p>
-	</body>
+	
 	
 		<hr width="2000" size="4" class="line" align="leftTop"/>
 	
@@ -29,6 +31,10 @@
 			<p><font color="white" size="3">Nothing Generator 2 | <span id="gen2">0 </span> / 10 | <span id="gen2cost">100 </span> | <span id="gen2val">0</span> Generators | <span id="gen2x">1</span>x</font></p>
 		</button>
 	</div>
-
-
+	
+	<button class="save" onclick="GameSave()">
+		<p><font size="6" color="white">save</font></p>
+	</button>
+	
+	</body>
 </html>

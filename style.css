@@ -28,3 +28,15 @@
 	position: relative;
 	top: 10px;
 }
+
+.save {
+	position: relative;
+	top: 100px;
+	border: 2px solid white;
+	height: 65px;
+	width: 100px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
