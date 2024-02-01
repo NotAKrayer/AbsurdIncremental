@@ -7,7 +7,7 @@
 }
 
 .nothingGen {
-    width: 550px;
+    width: 950px;
     border: 2px solid white;
 	height: 50px;
 	background-color: transparent;
@@ -18,7 +18,7 @@
 
 .nothingGen2 {
 	display: none;
-    width: 550px;
+    width: 950px;
     border: 2px solid white;
 	height: 50px;
 	background-color: transparent;
@@ -29,9 +29,111 @@
 	top: 10px;
 }
 
+.nothingGen3 {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 20px;
+}
+
+.nothingGen4 {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 30px;
+}
+
+.nothingGen5 {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 40px;
+}
+
+.nothingGen6 {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 50px;
+}
+
+.nothingGen7 {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 60px;
+}
+
+.nothingGen8 {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 70px;
+}
+
 .save {
 	position: relative;
 	top: 100px;
+	border: 2px solid white;
+	height: 65px;
+	width: 100px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.reset {
+	position: relative;
+	top: 100px;
+	border: 2px solid white;
+	height: 65px;
+	width: 250px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.max {
+	position: relative;
+	bottom: 10px;
 	border: 2px solid white;
 	height: 65px;
 	width: 100px;

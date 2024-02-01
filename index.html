@@ -7,33 +7,77 @@
 	<script src="https://cdn.jsdelivr.net/npm/break_infinity.js@2/dist/break_infinity.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/NothingGen.js"></script>
-	<script src="scripts/save.js"></script>
+	<script src="scripts/max.js"></script>
 	<link rel="stylesheet" href="style.css"></link>
 	
 	<body class="body">
-		<p><font size="6" color="white">Absurd Incremental v0.2</font></p>
+		<p><font size="6" color="white">Absurd Incremental v0.3 | Big Update!</font></p>
 	
 	
 		<hr width="2000" size="4" class="line" align="leftTop"/>
 	
 	<div class="nothingPoint">
-		<p><font color="white" size="6">Nothing: <span id="Nothing">10</span></font></p>
+		<p><font color="white" size="6">Nothing: <span id="Nothing">10</span> | Nothing Per Second: <span id="nget">0</span></font></p>
 	</div>
+
+	<button class="max" onclick="maxgen()">
+		<p><font size="6" color="white">Max</font></p>
+	</button>
 
 	<div>
 		<button class="nothingGen" id="gen1bg" onclick="gen1Buy()">
-			<p><font color="white" size="3">Nothing Generator 1 | <span id="gen1">0 </span> / 10 | <span id="gen1cost">10 </span> | <span id="gen1val">0</span> Generators | <span id="gen1x">1</span>x</font></p>
+			<p><font color="white" size="3">Nothing Generator 1 | <span id="gen1">0 </span> / 10 | <span id="gen1cost">10 </span> | <span id="gen1val">0</span> Generators | <span id="gen1x">1</span>x | Generator 1 Per Second: <span id="gen1get">0</span></font></p>
 		</button>
 	</div>
 
 	<div>
 		<button class="nothingGen2" id="gen2bg" onclick="gen2Buy()">
-			<p><font color="white" size="3">Nothing Generator 2 | <span id="gen2">0 </span> / 10 | <span id="gen2cost">100 </span> | <span id="gen2val">0</span> Generators | <span id="gen2x">1</span>x</font></p>
+			<p><font color="white" size="3">Nothing Generator 2 | <span id="gen2">0 </span> / 10 | <span id="gen2cost">100 </span> | <span id="gen2val">0</span> Generators | <span id="gen2x">1</span>x | Generator 2 Per Second: <span id="gen2get">0</span></font></p
+		</button>
+	</div>
+	
+	<div>
+		<button class="nothingGen3" id="gen3bg" onclick="gen3Buy()">
+			<p><font color="white" size="3">Nothing Generator 3 | <span id="gen3">0 </span> / 10 | <span id="gen3cost">1.00e+3 </span> | <span id="gen3val">0</span> Generators | <span id="gen3x">1</span>x | Generator 3 Per Second: <span id="gen3get">0</span></font></p
+		</button>
+	</div>
+	
+	<div>
+		<button class="nothingGen4" id="gen4bg" onclick="gen4Buy()">
+			<p><font color="white" size="3">Nothing Generator 4 | <span id="gen4">0 </span> / 10 | <span id="gen4cost">1.00e+4 </span> | <span id="gen4val">0</span> Generators | <span id="gen4x">1</span>x | Generator 4 Per Second: <span id="gen4get">0</span></font></p
+		</button>
+	</div>
+	
+	<div>
+		<button class="nothingGen5" id="gen5bg" onclick="gen5Buy()">
+			<p><font color="white" size="3">Nothing Generator 5 | <span id="gen5">0 </span> / 10 | <span id="gen5cost">1.00e+5 </span> | <span id="gen5val">0</span> Generators | <span id="gen5x">1</span>x | Generator 5 Per Second: <span id="gen5get">0</span></font></p
+		</button>
+	</div>
+	
+	<div>
+		<button class="nothingGen6" id="gen6bg" onclick="gen6Buy()">
+			<p><font color="white" size="3">Nothing Generator 6 | <span id="gen6">0 </span> / 10 | <span id="gen6cost">1.00e+6 </span> | <span id="gen6val">0</span> Generators | <span id="gen6x">1</span>x | Generator 6 Per Second: <span id="gen6get">0</span></font></p
+		</button>
+	</div>
+	
+	<div>
+		<button class="nothingGen7" id="gen7bg" onclick="gen7Buy()">
+			<p><font color="white" size="3">Nothing Generator 7 | <span id="gen7">0 </span> / 10 | <span id="gen7cost">1.00e+7 </span> | <span id="gen7val">0</span> Generators | <span id="gen7x">1</span>x | Generator 7 Per Second: <span id="gen7get">0</span></font></p
+		</button>
+	</div>
+	
+	<div>
+		<button class="nothingGen8" id="gen8bg" onclick="gen8Buy()">
+			<p><font color="white" size="3">Nothing Generator 8 | <span id="gen8">0 </span> / 10 | <span id="gen8cost">1.00e+8 </span> | <span id="gen8val">0</span> Generators | <span id="gen8x">1</span>x | Generator 8 Per Second: <span id="gen8get">0</span></font></p
 		</button>
 	</div>
 	
 	<button class="save" onclick="GameSave()">
-		<p><font size="6" color="white">save</font></p>
+		<p><font size="6" color="white">Save</font></p>
+	</button>
+	
+	<button class="reset" onclick="deleteSave()">
+		<p><font size="6" color="white">Reset Game</font></p>
 	</button>
 	
 	</body>
