@@ -793,8 +793,7 @@ function b64_to_utf8(str) {
 function expsave() {
 	var expsave = utf8_to_b64(JSON.stringify(localStorage.getItem("saveGame")));
 	console.log(expsave);
-	alert("Copied to clipboard!")
-	copy(expsave)
+	var oursavelol = prompt('Here your save', expsave);
 }
 
 function impsave() {
@@ -904,3 +903,4 @@ function negativdedest() {
 }
 
 setInterval("negativdedest()", 100);
+
