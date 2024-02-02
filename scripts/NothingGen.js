@@ -162,13 +162,13 @@ function NothingGet() {
   document.getElementById("gen7get").innerHTML = new Decimal(gen7get).toPrecision(3);
 }
 
-setInterval("BGButtonTest()", 100);
-setInterval("BGButtonTest3()", 100);
-setInterval("BGButtonTest4()", 100);
-setInterval("BGButtonTest5()", 100);
-setInterval("BGButtonTest6()", 100);
-setInterval("BGButtonTest7()", 100);
-setInterval("BGButtonTest8()", 100);
+setInterval("BGButtonTest()", 1);
+setInterval("BGButtonTest3()", 1);
+setInterval("BGButtonTest4()", 1);
+setInterval("BGButtonTest5()", 1);
+setInterval("BGButtonTest6()", 1);
+setInterval("BGButtonTest7()", 1);
+setInterval("BGButtonTest8()", 1);
 setInterval("NothingGet()", 1000);
 
 function gen1Buy() {
@@ -246,7 +246,7 @@ function gen6Buy() {
   if (Nothing.gte(gen6cost)) {
     gen6 = Decimal.add(gen6, "1");
     gen6val = Decimal.add(gen6val, "1");
-    Nothing = Decimal.minus(Nothing, gen5cost);
+    Nothing = Decimal.minus(Nothing, gen6cost);
     document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
     document.getElementById("gen6").innerHTML = gen6.toPrecision(3);
 	document.getElementById("gen6cost").innerHTML = new Decimal(gen6cost).toPrecision(3);
@@ -260,7 +260,7 @@ function gen7Buy() {
   if (Nothing.gte(gen7cost)) {
     gen7 = Decimal.add(gen7, "1");
     gen7val = Decimal.add(gen7val, "1");
-    Nothing = Decimal.minus(Nothing, gen5cost);
+    Nothing = Decimal.minus(Nothing, gen7cost);
     document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
     document.getElementById("gen7").innerHTML = gen7.toPrecision(3);
 	document.getElementById("gen7cost").innerHTML = new Decimal(gen7cost).toPrecision(3);
@@ -274,7 +274,7 @@ function gen8Buy() {
   if (Nothing.gte(gen8cost)) {
     gen8 = Decimal.add(gen8, "1");
     gen8val = Decimal.add(gen8val, "1");
-    Nothing = Decimal.minus(Nothing, gen5cost);
+    Nothing = Decimal.minus(Nothing, gen8cost);
     document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
     document.getElementById("gen8").innerHTML = gen8.toPrecision(3);
 	document.getElementById("gen8cost").innerHTML = new Decimal(gen8cost).toPrecision(3);
@@ -291,7 +291,7 @@ function gen8Buy() {
 function newGen1() {
   if (new Decimal(gen1).gte(10.0)) {
     gen1x = Decimal.mul(gen1x, "2");
-    gen1cost = Decimal.mul(gen1cost, "100");
+    gen1cost = Decimal.mul(gen1cost, "1000");
     gen1 = "0.0";
     nget = Decimal.mul(nget, gen1x);
 	document.getElementById("gen1cost").innerHTML = gen1cost.toPrecision(3);
@@ -307,7 +307,7 @@ function newGen1() {
 function newGen2() {
   if (new Decimal(gen2).gte(10.0)) {
     gen2x = Decimal.mul(gen2x, "2");
-    gen2cost = Decimal.mul(gen2cost, "100");
+    gen2cost = Decimal.mul(gen2cost, "10000");
     gen2 = "0.0";
 	document.getElementById("gen2cost").innerHTML = gen2cost.toPrecision(3);
     document.getElementById("gen2x").innerHTML = gen2x.toPrecision(3);
@@ -316,13 +316,13 @@ function newGen2() {
     const gen2bg = document.getElementById("gen2bg");
     gen2bg.style.background = "transparent";
     gen2bg.style.cursor = "default";
-  }
+  } 
 }
 
 function newGen3() {
   if (new Decimal(gen3).gte(10.0)) {
     gen3x = Decimal.mul(gen3x, "2");
-    gen3cost = Decimal.mul(gen3cost, "100");
+    gen3cost = Decimal.mul(gen3cost, "10000");
     gen3 = "0.0";
 	document.getElementById("gen3cost").innerHTML = gen3cost.toPrecision(3);
     document.getElementById("gen3x").innerHTML = gen3x.toPrecision(3);
@@ -337,7 +337,7 @@ function newGen3() {
 function newGen4() {
   if (new Decimal(gen4).gte(10.0)) {
     gen4x = Decimal.mul(gen4x, "2");
-    gen4cost = Decimal.mul(gen4cost, "100");
+    gen4cost = Decimal.mul(gen4cost, "10000");
     gen4 = "0.0";
 	document.getElementById("gen4cost").innerHTML = gen4cost.toPrecision(3);
     document.getElementById("gen4x").innerHTML = gen4x.toPrecision(3);
@@ -352,7 +352,7 @@ function newGen4() {
 function newGen5() {
   if (new Decimal(gen5).gte(10.0)) {
     gen5x = Decimal.mul(gen5x, "2");
-    gen5cost = Decimal.mul(gen5cost, "100");
+    gen5cost = Decimal.mul(gen5cost, "10000");
     gen5 = "0.0";
 	document.getElementById("gen5cost").innerHTML = gen5cost.toPrecision(3);
     document.getElementById("gen5x").innerHTML = gen5x.toPrecision(3);
@@ -367,7 +367,7 @@ function newGen5() {
 function newGen6() {
   if (new Decimal(gen6).gte(10.0)) {
     gen6x = Decimal.mul(gen6x, "2");
-    gen6cost = Decimal.mul(gen6cost, "100");
+    gen6cost = Decimal.mul(gen6cost, "10000");
     gen6 = "0.0";
 	document.getElementById("gen6cost").innerHTML = gen6cost.toPrecision(3);
     document.getElementById("gen6x").innerHTML = gen6x.toPrecision(3);
@@ -382,7 +382,7 @@ function newGen6() {
 function newGen7() {
   if (new Decimal(gen7).gte(10.0)) {
     gen7x = Decimal.mul(gen7x, "2");
-    gen7cost = Decimal.mul(gen7cost, "100");
+    gen7cost = Decimal.mul(gen7cost, "10000");
     gen7 = "0.0";
 	document.getElementById("gen7cost").innerHTML = gen7cost.toPrecision(3);
     document.getElementById("gen7x").innerHTML = gen7x.toPrecision(3);
@@ -397,7 +397,7 @@ function newGen7() {
 function newGen8() {
   if (new Decimal(gen8).gte(10.0)) {
     gen8x = Decimal.mul(gen8x, "2");
-    gen8cost = Decimal.mul(gen8cost, "100");
+    gen8cost = Decimal.mul(gen8cost, "10000");
     gen8 = "0.0";
 	document.getElementById("gen8cost").innerHTML = gen8cost.toPrecision(3);
     document.getElementById("gen8x").innerHTML = gen8x.toPrecision(3);
@@ -457,7 +457,7 @@ function gen8nget() {
 }
 
 setInterval("gennget()", 100);
-setInterval("BGButtonTest2()", 100);
+setInterval("BGButtonTest2()", 1);
 setInterval("gen2nget()", 1000);
 setInterval("gen3nget()", 1000);
 setInterval("gen4nget()", 1000);
@@ -781,3 +781,126 @@ else {
     console.log("dont delete")
 }
 }
+
+function utf8_to_b64(str) {
+	return window.btoa(unescape(encodeURIComponent(str)));
+}
+
+function b64_to_utf8(str) {
+	return decodeURIComponent(escape(window.atob(str)));
+}
+ 
+function expsave() {
+	var expsave = utf8_to_b64(JSON.stringify(localStorage.getItem("saveGame")));
+	console.log(expsave);
+	alert("Copied to clipboard!")
+	copy(expsave)
+}
+
+function impsave() {
+	const valueforimp = prompt('Import your save');
+	const raw = JSON.parse(b64_to_utf8(valueforimp));
+	const savedGame = JSON.parse(raw);
+	console.log(savedGame)
+	if (typeof savedGame.nothing !== "undefined") Nothing = savedGame.nothing;	
+	if (typeof savedGame.nget !== "undefined") nget = savedGame.nget;	
+	if (typeof savedGame.gen1 !== "undefined") gen1 = savedGame.gen1;	 
+	if (typeof savedGame.gen1val !== "undefined") gen1val = savedGame.gen1val;	
+	if (typeof savedGame.gen1x !== "undefined") gen1x = savedGame.gen1x;	
+	if (typeof savedGame.gen1cost !== "undefined") gen1cost = savedGame.gen1cost;	
+	if (typeof savedGame.gen2vis !== "undefined") gen2vis = savedGame.gen2vis;	
+	//
+	if (typeof savedGame.gen2 !== "undefined") gen2 = savedGame.gen2;	 
+	if (typeof savedGame.gen2val !== "undefined") gen2val = savedGame.gen2val;	
+	if (typeof savedGame.gen2x !== "undefined") gen2x = savedGame.gen2x;	
+	if (typeof savedGame.gen2cost !== "undefined") gen2cost = savedGame.gen2cost;	
+	if (typeof savedGame.gen1get !== "undefined") gen1get = savedGame.gen1get;
+	//
+	if (typeof savedGame.gen3 !== "undefined") gen3 = savedGame.gen3;	 
+	if (typeof savedGame.gen3val !== "undefined") gen3val = savedGame.gen3val;	
+	if (typeof savedGame.gen3x !== "undefined") gen3x = savedGame.gen3x;	
+	if (typeof savedGame.gen3cost !== "undefined") gen3cost = savedGame.gen3cost;	
+	if (typeof savedGame.gen2get !== "undefined") gen2get = savedGame.gen2get;
+	if (typeof savedGame.gen3vis !== "undefined") gen3vis = savedGame.gen3vis;
+	//	
+	if (typeof savedGame.gen4 !== "undefined") gen4 = savedGame.gen4;	 
+	if (typeof savedGame.gen4val !== "undefined") gen4val = savedGame.gen4val;	
+	if (typeof savedGame.gen4x !== "undefined") gen4x = savedGame.gen4x;	
+	if (typeof savedGame.gen4cost !== "undefined") gen4cost = savedGame.gen4cost;	
+	if (typeof savedGame.gen3get !== "undefined") gen3get = savedGame.gen3get;
+	if (typeof savedGame.gen4vis !== "undefined") gen4vis = savedGame.gen4vis;	
+	//
+	if (typeof savedGame.gen5 !== "undefined") gen5 = savedGame.gen5;	 
+	if (typeof savedGame.gen5val !== "undefined") gen5val = savedGame.gen5val;	
+	if (typeof savedGame.gen5x !== "undefined") gen5x = savedGame.gen5x;	
+	if (typeof savedGame.gen5cost !== "undefined") gen5cost = savedGame.gen5cost;	
+	if (typeof savedGame.gen4get !== "undefined") gen4get = savedGame.gen4get;
+	if (typeof savedGame.gen5vis !== "undefined") gen5vis = savedGame.gen5vis;	
+	//
+	if (typeof savedGame.gen6 !== "undefined") gen6 = savedGame.gen6;	 
+	if (typeof savedGame.gen6val !== "undefined") gen6val = savedGame.gen6val;	
+	if (typeof savedGame.gen6x !== "undefined") gen6x = savedGame.gen6x;	
+	if (typeof savedGame.gen6cost !== "undefined") gen6cost = savedGame.gen6cost;	
+	if (typeof savedGame.gen5get !== "undefined") gen5get = savedGame.gen5get;
+	if (typeof savedGame.gen6vis !== "undefined") gen6vis = savedGame.gen6vis;	
+	//
+	if (typeof savedGame.gen7 !== "undefined") gen7 = savedGame.gen7;	 
+	if (typeof savedGame.gen7val !== "undefined") gen7val = savedGame.gen7val;	
+	if (typeof savedGame.gen7x !== "undefined") gen7x = savedGame.gen7x;	
+	if (typeof savedGame.gen7cost !== "undefined") gen7cost = savedGame.gen7cost;	
+	if (typeof savedGame.gen6get !== "undefined") gen6get = savedGame.gen6get;
+	if (typeof savedGame.gen7vis !== "undefined") gen7vis = savedGame.gen7vis;	
+	//
+	if (typeof savedGame.gen8 !== "undefined") gen8 = savedGame.gen8;	 
+	if (typeof savedGame.gen8val !== "undefined") gen8val = savedGame.gen8val;	
+	if (typeof savedGame.gen8x !== "undefined") gen8x = savedGame.gen8x;	
+	if (typeof savedGame.gen8cost !== "undefined") gen8cost = savedGame.gen8cost;	
+	if (typeof savedGame.gen7get !== "undefined") gen7get = savedGame.gen6get;
+	if (typeof savedGame.gen8vis !== "undefined") gen8vis = savedGame.gen8vis;	
+	//
+	if (gen2vis > 0) {
+		gen2bg.style.display = "block";
+	}
+	
+	if (gen3vis > 0) {
+		gen3bg.style.display = "block";
+	}
+	
+	if (gen4vis > 0) {
+		gen4bg.style.display = "block";
+	}
+	
+	if (gen5vis > 0) {
+		gen5bg.style.display = "block";
+	}
+	
+	if (gen6vis > 0) {
+		gen6bg.style.display = "block";
+	}
+	
+	if (gen7vis > 0) {
+		gen7bg.style.display = "block";
+	}
+	
+	if (gen8vis > 0) {
+		gen8bg.style.display = "block";
+	}
+	updateVars();
+	
+	gen2bg.style.display = "none";
+	gen3bg.style.display = "none";
+	gen4bg.style.display = "none";
+	gen5bg.style.display = "none";
+	gen6bg.style.display = "none";
+	gen7bg.style.display = "none";
+	gen8bg.style.display = "none";
+	visibleGen()
+}
+
+function negativdedest() {
+ if (new Decimal(Nothing).lt("0")) {
+	Nothing = new Decimal("0")
+ }	 
+}
+
+setInterval("negativdedest()", 100);

@@ -107,12 +107,24 @@
 	top: 70px;
 }
 
-.save {
+.import {
 	position: relative;
 	top: 100px;
 	border: 2px solid white;
 	height: 65px;
-	width: 100px;
+	width: 130px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.export {
+	position: relative;
+	top: 100px;
+	border: 2px solid white;
+	height: 65px;
+	width: 130px;
 	background-color: black;
 	outline: transparent;	
 	border-radius: 10px;
