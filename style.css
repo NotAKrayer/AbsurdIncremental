@@ -107,6 +107,39 @@
 	top: 70px;
 }
 
+.DotUp1 {
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	top: 10px;
+}
+
+.DotUp2 {
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	top: 20px;
+}
+
+.DotUp3 {
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	top: 30px;
+}
+
 .import {
 	position: relative;
 	top: 100px;
@@ -153,4 +186,48 @@
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: pointer;
+}
+
+.genN {
+	position: relative;
+	bottom: 10px;
+	border: 2px solid white;
+	height: 65px;
+	width: 50px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+
+.dot {
+	display: none;
+	position: relative;
+	border: 2px solid white;
+	height: 65px;
+	bottom: 75px;
+	width: 50px;
+	left: 65px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.madot {
+	display: none;
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	position: relative;
+	top: 80px;
+}
+
+.Dotpoint {
+	display: none; 
 }
