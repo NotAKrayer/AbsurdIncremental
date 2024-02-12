@@ -106,6 +106,7 @@ function Dot2Buy() {
 
 
 function genN() {
+	int10 = setInterval("madb()", 50);
 	gen1bg.style.display = "block";
 	if (gen2vis > 0) {
 	gen2bg.style.display = "block";
@@ -134,10 +135,14 @@ function genN() {
 	DotUp2.style.display = "none"
 	DotUp3.style.display = "none"
 	document.getElementById("dotcontainer").style.display = "none";
+	document.getElementById("exp").style.display = "none";
+	document.getElementById("imp").style.display = "none";
+	document.getElementById("reset").style.display = "none";
 		}
 
 
 function dotshow() {
+	clearInterval(int10)
 	gen1bg.style.display = "none";
 	gen2bg.style.display = "none";
 	gen3bg.style.display = "none";
@@ -153,6 +158,32 @@ function dotshow() {
 	DotUp3.style.display = "block"
 	document.getElementById("madot").style.display = "none";
 	document.getElementById("dotcontainer").style.display = "block";
+	document.getElementById("exp").style.display = "none";
+	document.getElementById("imp").style.display = "none";
+	document.getElementById("reset").style.display = "none";
+}
+
+function setshow() {
+	clearInterval(int10)
+	gen1bg.style.display = "none";
+	gen2bg.style.display = "none";
+	gen3bg.style.display = "none";
+	gen4bg.style.display = "none";
+	gen5bg.style.display = "none";
+	gen6bg.style.display = "none";
+	gen7bg.style.display = "none";
+	gen8bg.style.display = "none";
+	nothing.style.display = "none";
+	max.style.display = "none";
+	DotUp1.style.display = "none"
+	DotUp2.style.display = "none"
+	DotUp3.style.display = "none"
+	madot.style.display = "none"
+	document.getElementById("madot").style.display = "none";
+	document.getElementById("dotcontainer").style.display = "none";
+	document.getElementById("exp").style.display = "block";
+	document.getElementById("imp").style.display = "block";
+	document.getElementById("reset").style.display = "block";
 }
 
 function showD() {
@@ -176,8 +207,6 @@ function dotshownteval() {
 	}
 }
 
-
-setInterval("madb()", 1);
 setInterval("dotgets()", 1);
 
 

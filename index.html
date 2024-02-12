@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5"> <!--Строчка, которая делает магию-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Строчка, которая делает магию-->
 	<title>Absurd Incremental</title>
 	</head>
 	
@@ -14,8 +14,14 @@
 	<link rel="stylesheet" href="style.css"></link>
 	
 	<body class="body">
-		<p><font size="6" color="white">Absurd Incremental v0.4 | Big Dot!</font></p>
+		<p><font size="6" color="white">Absurd Incremental v0.4.1 | Small Ui ReDesigne</font></p>
 		
+<div class="buttons1">
+
+	<button class="settings" onclick="setshow()" id="settings">
+		<p><font size="6" color="white">S</font></p>
+	</button>
+
 	<button class="genN" onclick="genN()">
 		<p><font size="6" color="white">N</font></p>
 	</button>
@@ -23,6 +29,8 @@
 	<button class="dot" onclick="dotshow()" id="dots">
 		<p><font size="6" color="white">D</font></p>
 	</button>
+
+</div>
 	
 		<hr width="2000" size="4" class="line" align="leftTop"/>
 	
@@ -35,32 +43,32 @@
 	</div>
 	
 
-	<button class="max" onclick="maxgen()" id="max">
-		<p><font size="6" color="white">Max</font></p>
-	</button>
-
-	<div>
-		<button class="nothingGen" id="gen1bg" onclick="gen1Buy()">
-			<p><font color="white" size="3">Nothing Generator 1 | <span id="gen1">0 </span> / 10 | <span id="gen1cost">10 </span> | <span id="gen1val">0</span> Generators | <span id="gen1x">1</span>x | Generator 1 Per Second: <span id="gen1get">0</span></font></p>
-		</button>
-	</div>
-	
-	<div>
+<div class="dotup">
 		<button class="DotUp1" id="DotUp1" onclick="Dot1Buy()">
 			<p><font color="white" size="3">Dot Upgrade 1 | <span id="dot1cost">5.0 </span> Dots | <span id="dot1val">0</span> Upgrades | 1.5x Nothing | Current Boost: <span id="dot1boost">1</span>x</font></p>
 		</button>
-	</div>
 	
-	<div>
+	&nbsp;&nbsp;&nbsp;
+	
 		<button class="DotUp2" id="DotUp2" onclick="Dot2Buy()">
 			<p><font color="white" size="3">Dot Upgrade 2 | <span id="dot2cost">25.0 </span> Dots | <span id="dot2val">0</span> Upgrades | Tickspeed - 10 | Current Boost: <span id="tickspeed">1000</span> - 10</font></p>
 		</button>
-	</div>
-	
 
-	<div>
+	&nbsp;&nbsp;&nbsp;
+
 		<button class="DotUp3" id="DotUp3" onclick="Dot3Buy()">
 			<p><font color="white" size="3">Dot Upgrade 3 | <span id="dot3cost"> 5 </span> Dots | <span id="dot3val">0</span> Upgrades | 1.65x Dots | Current Boost: <span id="dotx">1.0</span>x</font></p>
+		</button>	
+</div>	
+	
+	<button class="max" onclick="maxgen()" id="max">
+		<p><font size="6" color="white">Max</font></p>
+	</button>
+	
+	
+	<div>
+		<button class="nothingGen" id="gen1bg" onclick="gen1Buy()">
+			<p><font color="white" size="3">Nothing Generator 1 | <span id="gen1">0 </span> / 10 | <span id="gen1cost">10 </span> | <span id="gen1val">0</span> Generators | <span id="gen1x">1</span>x | Generator 1 Per Second: <span id="gen1get">0</span></font></p>
 		</button>
 	</div>
 	
@@ -107,21 +115,19 @@
 		</button>
 	</div>
 	
-	<div>
 		<button id="madot" class="madot" onclick="MakeADotReb()">
-			<p><font color="white" size="3">Reset all your Nothing and Nothing Upgrades and Make a Dot: <span id="dotget">0</span></font></p
+			<p><font color="white" size="3">Reset all your Nothing and Nothing Upgrades and Make a Dot: <span id="dotget">0</span></font></p>
 		</button>
-	</div>
 	
-	<button class="import" onclick="impsave()">
+	<button class="import" onclick="impsave()" id="imp">
 		<p><font size="6" color="white">Import</font></p>
 	</button>
 	
-	<button class="export" onclick="expsave()">
+	<button class="export" onclick="expsave()" id="exp">
 		<p><font size="6" color="white">Export</font></p>
 	</button>
 	
-	<button class="reset" onclick="deleteSave()">
+	<button class="reset" onclick="deleteSave()" id="reset">
 		<p><font size="6" color="white">Reset Game</font></p>
 	</button>
 	

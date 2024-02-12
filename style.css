@@ -115,18 +115,17 @@
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: default;
-	top: 10px;
 }
 
 .DotUp2 {
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	top: 10px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: default;
-	top: 20px;
 }
 
 .DotUp3 {
@@ -137,12 +136,11 @@
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: default;
-	top: 30px;
 }
+
 
 .import {
 	position: relative;
-	top: 100px;
 	border: 2px solid white;
 	height: 65px;
 	width: 130px;
@@ -154,9 +152,10 @@
 
 .export {
 	position: relative;
-	top: 100px;
 	border: 2px solid white;
 	height: 65px;
+	left: 135px;
+	bottom: 65px;
 	width: 130px;
 	background-color: black;
 	outline: transparent;	
@@ -166,10 +165,11 @@
 
 .reset {
 	position: relative;
-	top: 100px;
 	border: 2px solid white;
 	height: 65px;
 	width: 250px;
+	left: 270px;
+	bottom: 130px;
 	background-color: black;
 	outline: transparent;	
 	border-radius: 10px;
@@ -194,21 +194,35 @@
 	border: 2px solid white;
 	height: 65px;
 	width: 50px;
+	left: 10px;
 	background-color: black;
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: pointer;
 }
 
+.settings {
+	display: block;
+	position: relative;
+	bottom: 10px;
+	left: 0px;
+	border: 2px solid white;
+	height: 65px;
+	width: 50px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
 
 .dot {
 	display: none;
 	position: relative;
+	bottom: 10px;
+	left: 20px;
 	border: 2px solid white;
 	height: 65px;
-	bottom: 75px;
 	width: 50px;
-	left: 65px;
 	background-color: black;
 	outline: transparent;	
 	border-radius: 10px;
@@ -221,7 +235,7 @@
     border: 2px solid white;
 	height: 50px;
 	background-color: transparent;
-	outline: transparent;	
+	outline: transparent;
 	border-radius: 10px;
 	cursor: default;
 	position: relative;
@@ -230,4 +244,15 @@
 
 .Dotpoint {
 	display: none; 
+}
+
+
+.buttons1 {
+	display: flex;	
+	margin: auto;
+}
+
+.dotup {
+  display: flex;
+  flex-direction: column;
 }
