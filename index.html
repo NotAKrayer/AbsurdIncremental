@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Строчка, которая делает магию-->
+	<meta name="viewport" content="width=device-width, initial-scale=0.5"> <!--Строчка, которая делает магию-->
 	<title>Absurd Incremental</title>
 	</head>
 	
@@ -50,12 +50,6 @@
 			<p><font color="white" size="3">Dot Upgrade 1 | <span id="dot1cost">5.0 </span> Dots | <span id="dot1val">0</span> Upgrades | 1.5x Nothing | Current Boost: <span id="dot1boost">1</span>x</font></p>
 		</button>
 	</div>
-
-	<div>
-		<button class="nothingGen2" id="gen2bg" onclick="gen2Buy()">
-			<p><font color="white" size="3">Nothing Generator 2 | <span id="gen2">0 </span> / 10 | <span id="gen2cost">100 </span> | <span id="gen2val">0</span> Generators | <span id="gen2x">1</span>x | Generator 2 Per Second: <span id="gen2get">0</span></font></p
-		</button>
-	</div>
 	
 	<div>
 		<button class="DotUp2" id="DotUp2" onclick="Dot2Buy()">
@@ -63,15 +57,22 @@
 		</button>
 	</div>
 	
+
 	<div>
-		<button class="nothingGen3" id="gen3bg" onclick="gen3Buy()">
-			<p><font color="white" size="3">Nothing Generator 3 | <span id="gen3">0 </span> / 10 | <span id="gen3cost">1.00e+3 </span> | <span id="gen3val">0</span> Generators | <span id="gen3x">1</span>x | Generator 3 Per Second: <span id="gen3get">0</span></font></p
+		<button class="DotUp3" id="DotUp3" onclick="Dot3Buy()">
+			<p><font color="white" size="3">Dot Upgrade 3 | <span id="dot3cost"> 5 </span> Dots | <span id="dot3val">0</span> Upgrades | 1.65x Dots | Current Boost: <span id="dotx">1.0</span>x</font></p>
 		</button>
 	</div>
 	
 	<div>
-		<button class="DotUp3" id="DotUp3" onclick="Dot3Buy()">
-			<p><font color="white" size="3">Dot Upgrade 3 | <span id="dot3cost"> 5 </span> Dots | <span id="dot3val">0</span> Upgrades | 1.65x Dots | Current Boost: <span id="dotx">1.0</span>x</font></p>
+		<button class="nothingGen2" id="gen2bg" onclick="gen2Buy()">
+			<p><font color="white" size="3">Nothing Generator 2 | <span id="gen2">0 </span> / 10 | <span id="gen2cost">100 </span> | <span id="gen2val">0</span> Generators | <span id="gen2x">1</span>x | Generator 2 Per Second: <span id="gen2get">0</span></font></p
+		</button>
+	</div>
+
+	<div>
+		<button class="nothingGen3" id="gen3bg" onclick="gen3Buy()">
+			<p><font color="white" size="3">Nothing Generator 3 | <span id="gen3">0 </span> / 10 | <span id="gen3cost">1.00e+3 </span> | <span id="gen3val">0</span> Generators | <span id="gen3x">1</span>x | Generator 3 Per Second: <span id="gen3get">0</span></font></p
 		</button>
 	</div>
 	
@@ -80,6 +81,7 @@
 			<p><font color="white" size="3">Nothing Generator 4 | <span id="gen4">0 </span> / 10 | <span id="gen4cost">1.00e+4 </span> | <span id="gen4val">0</span> Generators | <span id="gen4x">1</span>x | Generator 4 Per Second: <span id="gen4get">0</span></font></p
 		</button>
 	</div>
+	
 	
 	<div>
 		<button class="nothingGen5" id="gen5bg" onclick="gen5Buy()">
