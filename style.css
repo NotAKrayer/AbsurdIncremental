@@ -1,19 +1,35 @@
 .body {
 	background-color: black;
+	overflow-y: hidden;
+	overflow-x: hidden;
+
 }
 
 .line {
-	background-color:white;
+	background-color: white;
 }
 
 .nothingGen {
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: default;
+}
+
+.clickButton {
+    width: 500px;
+    border: 2px solid white;
+	height: 500px;
+	margin-left: 700px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+	display: none;
 }
 
 .nothingGen2 {
@@ -21,6 +37,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -34,6 +51,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -47,6 +65,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -60,6 +79,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -73,6 +93,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -86,6 +107,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -99,6 +121,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -111,6 +134,7 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 450px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -122,6 +146,7 @@
     border: 2px solid white;
 	height: 50px;
 	top: 10px;
+	margin-left: 450px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
@@ -132,12 +157,23 @@
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 450px;
 	background-color: transparent;
 	outline: transparent;	
 	border-radius: 10px;
 	cursor: default;
 }
 
+.DotUp4 {
+    width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	margin-left: 450px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+}
 
 .import {
 	position: relative;
@@ -176,11 +212,29 @@
 	cursor: pointer;
 }
 
+.volumes {
+	position: absolute;
+	border: 2px solid white;
+	top: 275px;
+	width: 260px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.volumesetting {
+	position: absolute;
+	top: 255px;
+	left: 290px;
+}
+
 .max {
 	position: relative;
 	bottom: 10px;
 	border: 2px solid white;
 	height: 65px;
+	margin-left: 900px;
 	width: 100px;
 	background-color: black;
 	outline: transparent;	
@@ -215,6 +269,10 @@
 	cursor: pointer;
 }
 
+.settings:hover {
+	transform: scale(1.1);
+}
+
 .dot {
 	display: none;
 	position: relative;
@@ -229,11 +287,26 @@
 	cursor: pointer;
 }
 
+.click {
+	display: none;
+	position: relative;
+	bottom: 10px;
+	left: 30px;
+	border: 2px solid white;
+	height: 65px;
+	width: 50px;
+	background-color: black;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: pointer;
+}
+
 .madot {
 	display: none;
     width: 950px;
     border: 2px solid white;
 	height: 50px;
+	margin-left: 480px;
 	background-color: transparent;
 	outline: transparent;
 	border-radius: 10px;
@@ -252,7 +325,115 @@
 	margin: auto;
 }
 
+.MaxAndTick {
+}
+
 .dotup {
   display: flex;
   flex-direction: column;
+}
+
+.dot:hover {
+	transform: scale(1.1);
+}
+
+.click:hover {
+	transform: scale(1.1);
+}
+
+.genN:hover {
+	transform: scale(1.1);
+}
+
+.nothingPoint {
+	padding: 2px;
+	background: #282828;
+	border-radius: 10px;
+}
+
+.ClickPoint {
+	padding: 2px;
+	background: #282828;
+	border-radius: 10px;
+}
+
+.Dotpoint {
+	padding: 1px;
+	background: #282828;
+	border-radius: 10px;
+}
+
+.cm {
+	display: none;
+}
+
+.clickButton:active {
+	transform: scale(1.01);
+}
+
+.ClickUp1 {
+	width: 950px;
+    border: 2px solid white;
+	height: 50px;
+	top: 50px;
+	margin-left: 480px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+	display: none;
+}
+
+.ClickUp2 {
+	width: 675px;
+	position: absolute;
+	top: 300px;
+    border: 2px solid white;
+	height: 50px;
+	margin-left: 10px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+}
+
+.ClickUp3 {
+	width: 675px;
+	position: absolute;
+	top: 375px;
+    border: 2px solid white;
+	height: 50px;
+	margin-left: 10px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+}
+
+.ClickUp4 {
+	width: 675px;
+	position: absolute;
+	top: 450px;
+    border: 2px solid white;
+	height: 50px;
+	margin-left: 10px;
+	background-color: transparent;
+	outline: transparent;	
+	border-radius: 10px;
+	cursor: default;
+}
+
+.credits {
+	display: none;
+	position: absolute;
+	top: 300px;
+}
+
+.bl {
+	display: none;
+}
+
+.imgd {
+	width: 100px; /* Adjust the width as needed */
+    height: auto;
 }

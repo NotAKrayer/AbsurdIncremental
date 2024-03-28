@@ -3,7 +3,6 @@
 //show d - показ кнопки D
 
 
-
 var dot1cost = new Decimal("5.0");
 var dot1val = new Decimal("0.0");
 var dot1boost = new Decimal("1.0");
@@ -13,6 +12,16 @@ var dot2val = new Decimal("0.0");
 
 var dot3cost = new Decimal("5.0");
 var dot3val = new Decimal("0.0");
+
+var dot4val = new Decimal("Not Purchased");
+var dot4p = 0
+
+var showmadot = new Decimal("1")
+var showclicks = 0
+var showdots = new Decimal("0")
+
+
+int10 = setInterval("madb()", 100);
 
 function BGButtonTestDot() {
   if (new Decimal(dot).gte(dot1cost)) {
@@ -44,6 +53,17 @@ function BGButtonTestDot() {
     DotUp3.style.background = "transparent";
     DotUp3.style.cursor = "default";
   }
+  
+    if (new Decimal(dot).gte(1e3)) {
+    const DotUp4 = document.getElementById("DotUp4");
+    DotUp4.style.background = "#43c443";
+    DotUp4.style.cursor = "pointer";
+  } else if (new Decimal(dot).lt(1e3)) {
+    const DotUp4 = document.getElementById("DotUp4");
+    DotUp4.style.background = "transparent";
+    DotUp4.style.cursor = "default";
+  }
+  
 }
 
 function Dot1Buy() {
@@ -104,9 +124,24 @@ function Dot2Buy() {
 }
 }
 
+function Dot4Buy() {
+if (new Decimal(dot4p).lt(1)) {
+  if (new Decimal(dot).gte(1e3)) {
+	showclicks = 1
+    dot4val = "Purchased";
+    dot = Decimal.minus(dot, 1e3);
+	dot4p = 1
+	showC()
+    document.getElementById("dot").innerHTML = dot.toPrecision(3);
+    document.getElementById("dot4val").innerHTML = dot4val
+  }
+}
+}
+
 
 function genN() {
-	int10 = setInterval("madb()", 50);
+	clearInterval(int10)
+	var showmadot = new Decimal("1")
 	gen1bg.style.display = "block";
 	if (gen2vis > 0) {
 	gen2bg.style.display = "block";
@@ -129,20 +164,36 @@ function genN() {
 	if (gen8vis > 0) {
 	gen8bg.style.display = "block";
 }
-	nothing.style.display = "block";
+	document.getElementById("nothing").style.display = "block";
 	max.style.display = "block";
 	DotUp1.style.display = "none"
 	DotUp2.style.display = "none"
 	DotUp3.style.display = "none"
+	DotUp4.style.display = "none"
+	document.getElementById("bl").style.display = "none";
+	document.getElementById("ClicksP").style.display = "none";
+	document.getElementById("cm").style.display = "none";
+	document.getElementById("clickButton").style.display = "none";
+	document.getElementById("ClickUp1").style.display = "none";
+	document.getElementById("ClickUp2").style.display = "none";
+	document.getElementById("ClickUp3").style.display = "none";
+	document.getElementById("ClickUp4").style.display = "none";
+	document.getElementById("credits").style.display = "none";
 	document.getElementById("dotcontainer").style.display = "none";
 	document.getElementById("exp").style.display = "none";
+	document.getElementById("tickspeeds").style.display = "block";
 	document.getElementById("imp").style.display = "none";
 	document.getElementById("reset").style.display = "none";
+	document.getElementById("volumes").style.display = "none";
+	document.getElementById("volset").style.display = "none";
+		int10 = setInterval("madb()", 100);
 		}
 
 
 function dotshow() {
 	clearInterval(int10)
+	
+	var showmadot = new Decimal("0")
 	gen1bg.style.display = "none";
 	gen2bg.style.display = "none";
 	gen3bg.style.display = "none";
@@ -151,20 +202,34 @@ function dotshow() {
 	gen6bg.style.display = "none";
 	gen7bg.style.display = "none";
 	gen8bg.style.display = "none";
-	nothing.style.display = "none";
+	document.getElementById("nothing").style.display = "none";
 	max.style.display = "none";
 	DotUp1.style.display = "block"
 	DotUp2.style.display = "block"
 	DotUp3.style.display = "block"
+	DotUp4.style.display = "block"
+	document.getElementById("bl").style.display = "none";
+	document.getElementById("credits").style.display = "none";
+	document.getElementById("ClicksP").style.display = "none";
+	document.getElementById("cm").style.display = "none";
+	document.getElementById("ClickUp4").style.display = "none";
+	document.getElementById("ClickUp3").style.display = "none";
+	document.getElementById("clickButton").style.display = "none";
+	document.getElementById("ClickUp1").style.display = "none";
+	document.getElementById("ClickUp2").style.display = "none";
 	document.getElementById("madot").style.display = "none";
 	document.getElementById("dotcontainer").style.display = "block";
 	document.getElementById("exp").style.display = "none";
+	document.getElementById("tickspeeds").style.display = "none";
 	document.getElementById("imp").style.display = "none";
 	document.getElementById("reset").style.display = "none";
+	document.getElementById("volumes").style.display = "none";
+	document.getElementById("volset").style.display = "none";
 }
 
 function setshow() {
 	clearInterval(int10)
+	var showmadot = new Decimal("0")
 	gen1bg.style.display = "none";
 	gen2bg.style.display = "none";
 	gen3bg.style.display = "none";
@@ -173,36 +238,97 @@ function setshow() {
 	gen6bg.style.display = "none";
 	gen7bg.style.display = "none";
 	gen8bg.style.display = "none";
-	nothing.style.display = "none";
+	document.getElementById("credits").style.display = "block";
+	document.getElementById("nothing").style.display = "none";
 	max.style.display = "none";
 	DotUp1.style.display = "none"
 	DotUp2.style.display = "none"
 	DotUp3.style.display = "none"
+	DotUp4.style.display = "none"
 	madot.style.display = "none"
+	document.getElementById("bl").style.display = "none";
+	document.getElementById("ClickUp3").style.display = "none";
+	document.getElementById("ClickUp4").style.display = "none";
+	document.getElementById("ClicksP").style.display = "none";
+	document.getElementById("ClickUp2").style.display = "none";
+	document.getElementById("ClickUp1").style.display = "none";
+	document.getElementById("clickButton").style.display = "none";
+	document.getElementById("cm").style.display = "none";
 	document.getElementById("madot").style.display = "none";
 	document.getElementById("dotcontainer").style.display = "none";
+	document.getElementById("tickspeeds").style.display = "none";
 	document.getElementById("exp").style.display = "block";
 	document.getElementById("imp").style.display = "block";
 	document.getElementById("reset").style.display = "block";
+	document.getElementById("volumes").style.display = "block";
+	document.getElementById("volset").style.display = "block";
+}
+
+function clickshow() {
+	clearInterval(int10)
+	var showmadot = new Decimal("0")
+	gen1bg.style.display = "none";
+	gen2bg.style.display = "none";
+	gen3bg.style.display = "none";
+	gen4bg.style.display = "none";
+	gen5bg.style.display = "none";
+	gen6bg.style.display = "none";
+	gen7bg.style.display = "none";
+	gen8bg.style.display = "none";
+	document.getElementById("credits").style.display = "none";
+	document.getElementById("ClickUp3").style.display = "block";
+	document.getElementById("bl").style.display = "block";
+	document.getElementById("nothing").style.display = "none";
+	max.style.display = "none";
+	DotUp1.style.display = "none"
+	DotUp2.style.display = "none"
+	DotUp3.style.display = "none"
+	DotUp4.style.display = "none"
+	madot.style.display = "none"
+	document.getElementById("cm").style.display = "block";
+	document.getElementById("clickButton").style.display = "block";
+	document.getElementById("ClickUp1").style.display = "block";
+	document.getElementById("ClickUp2").style.display = "block";
+	document.getElementById("ClicksP").style.display = "block";
+	document.getElementById("madot").style.display = "none";
+	document.getElementById("ClickUp4").style.display = "block";
+	document.getElementById("dotcontainer").style.display = "none";
+	document.getElementById("tickspeeds").style.display = "none";
+	document.getElementById("exp").style.display = "none";
+	document.getElementById("imp").style.display = "none";
+	document.getElementById("reset").style.display = "none";
+	document.getElementById("cm").style.display = "block";
+	document.getElementById("volumes").style.display = "none";
+	document.getElementById("volset").style.display = "none";
 }
 
 function showD() {
+	if (new Decimal(showdots).eq("1")) {
 	dots.style.display = "block";
+	}
+}
+
+function showC() {
+	if (new Decimal(showclicks).eq("1")) {
+	document.getElementById("clicks").style.display = "block"
+}
 }
 
 function dotgets() {
-	dotget = Decimal.floor(Decimal.pow(Decimal.log10(Nothing) - 25, 0.7).mul(2 * dotx)).add(10);
+	dotget = Decimal.mul(Decimal.floor(Decimal.pow(Decimal.log10(Nothing) - 25, 0.7).mul(2 * dotx)).add(10), click2boost);
 	document.getElementById("dotget").innerHTML = dotget.toPrecision(3);
 }
 
 function madb() {
+if (showmadot.gte("1")) {
   if (new Decimal(Nothing).gte("1e40")) {
 	document.getElementById("madot").style.display = "block";
-  }
+	}
+}
 }
 
 function dotshownteval() {
-	if (showdots = 1) {
+	if (new Decimal(showdots).eq("1")) {
 		showD()
 	}
 }
@@ -216,11 +342,11 @@ function MakeADotReb() {
 if (answer) {
 	
 	showD();
-	showdots = 1;
+	var showdots = new Decimal("1");
 	dot = Decimal.add(dot, dotget);
 	document.getElementById("dot").innerHTML = dot.toPrecision(3);
 
-    if (typeof savedGame.nothing !== "undefined") Nothing = 10;	
+    if (typeof savedGame.Nothing !== "undefined") Nothing = 10;	
 	if (typeof savedGame.nget !== "undefined") nget = 0;	
 	if (typeof savedGame.gen1 !== "undefined") gen1 = 0;	 
 	if (typeof savedGame.gen1val !== "undefined") gen1val = 0;	

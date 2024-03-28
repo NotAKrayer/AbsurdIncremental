@@ -54,6 +54,7 @@ var gen8vis = 0
 
 tickspeed = 1000
 
+var showdots = new Decimal("0")
 
 function BGButtonTest() {
   if (new Decimal(Nothing).gte(gen1cost)) {
@@ -419,7 +420,7 @@ function newGen8() {
 
 
 function gennget() {
-	nget = Decimal.mul(Decimal.mul(gen1val, gen1x), dot1boost);
+	nget = Decimal.mul(Decimal.mul(Decimal.mul(gen1val, gen1x), dot1boost), click1boost);
 	gen1get = Decimal.mul(gen2val, gen2x);
 	gen2get = Decimal.mul(gen3val, gen3x);
 	gen3get = Decimal.mul(gen4val, gen4x);
@@ -482,10 +483,93 @@ setInterval("newGen6()", 100);
 setInterval("newGen7()", 100);
 setInterval("newGen8()", 100);
 
+function autobuy() {
+  if (new Decimal(Nothing).gte(gen1cost)) {
+    gen1 = Decimal.add(gen1, "1");
+    gen1val = Decimal.add(gen1val, "1");
+    Nothing = Decimal.minus(Nothing, gen1cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen1").innerHTML = gen1.toPrecision(3);
+	document.getElementById("gen1cost").innerHTML = new Decimal(gen1cost).toPrecision(3);
+    document.getElementById("gen1val").innerHTML = gen1val.toPrecision(3);
+	gen2vis = 1
+  }
+ if (Nothing.gte(gen2cost)) {
+    gen2 = Decimal.add(gen2, "1");
+    gen2val = Decimal.add(gen2val, "1");
+    Nothing = Decimal.minus(Nothing, gen2cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen2").innerHTML = gen2.toPrecision(3);
+	document.getElementById("gen2cost").innerHTML = new Decimal(gen2cost).toPrecision(3);
+    document.getElementById("gen2val").innerHTML = gen2val.toPrecision(3);
+	gen3vis = 1
+  }
+  if (Nothing.gte(gen3cost)) {
+    gen3 = Decimal.add(gen3, "1");
+    gen3val = Decimal.add(gen3val, "1");
+    Nothing = Decimal.minus(Nothing, gen3cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen3").innerHTML = gen3.toPrecision(3);
+	document.getElementById("gen3cost").innerHTML = new Decimal(gen3cost).toPrecision(3);
+    document.getElementById("gen3val").innerHTML = gen3val.toPrecision(3);
+	gen4vis = 1
+  }
+  if (Nothing.gte(gen4cost)) {
+    gen4 = Decimal.add(gen4, "1");
+    gen4val = Decimal.add(gen4val, "1");
+    Nothing = Decimal.minus(Nothing, gen4cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen4").innerHTML = gen4.toPrecision(3);
+	document.getElementById("gen4cost").innerHTML = new Decimal(gen4cost).toPrecision(3);
+    document.getElementById("gen4val").innerHTML = gen4val.toPrecision(3);
+	gen5vis = 1
+  }
+  if (Nothing.gte(gen5cost)) {
+    gen5 = Decimal.add(gen5, "1");
+    gen5val = Decimal.add(gen5val, "1");
+    Nothing = Decimal.minus(Nothing, gen5cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen5").innerHTML = gen5.toPrecision(3);
+	document.getElementById("gen5cost").innerHTML = new Decimal(gen5cost).toPrecision(3);
+    document.getElementById("gen5val").innerHTML = gen5val.toPrecision(3);
+	gen6vis = 1
+  }
+	if (Nothing.gte(gen6cost)) {
+    gen6 = Decimal.add(gen6, "1");
+    gen6val = Decimal.add(gen6val, "1");
+    Nothing = Decimal.minus(Nothing, gen6cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen6").innerHTML = gen6.toPrecision(3);
+	document.getElementById("gen6cost").innerHTML = new Decimal(gen6cost).toPrecision(3);
+    document.getElementById("gen6val").innerHTML = gen6val.toPrecision(3);
+  }
+  if (Nothing.gte(gen7cost)) {
+    gen7 = Decimal.add(gen7, "1");
+    gen7val = Decimal.add(gen7val, "1");
+    Nothing = Decimal.minus(Nothing, gen7cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen7").innerHTML = gen7.toPrecision(3);
+	document.getElementById("gen7cost").innerHTML = new Decimal(gen7cost).toPrecision(3);
+    document.getElementById("gen7val").innerHTML = gen7val.toPrecision(3);
+	gen7vis = 1
+  }
+
+  if (Nothing.gte(gen8cost)) {
+    gen8 = Decimal.add(gen8, "1");
+    gen8val = Decimal.add(gen8val, "1");
+    Nothing = Decimal.minus(Nothing, gen8cost);
+    document.getElementById("Nothing").innerHTML = Nothing.toPrecision(3);
+    document.getElementById("gen8").innerHTML = gen8.toPrecision(3);
+	document.getElementById("gen8cost").innerHTML = new Decimal(gen8cost).toPrecision(3);
+    document.getElementById("gen8val").innerHTML = gen8val.toPrecision(3);
+	gen8vis = 1
+  }
+}
+
 
 function GameSave() {
 	var saveGame = {
-		nothing: Nothing,
+		Nothing: Nothing,
 		nget: nget,
 		gen1: gen1,
 		gen1val: gen1val,
@@ -555,7 +639,29 @@ function GameSave() {
 		dot2val: dot2val,
 		//
 		dot3cost: dot3cost,
-		dot3val: dot3val
+		dot3val: dot3val,
+		//
+		dot4val: dot4val,
+		dot4p: dot4p,
+		//
+		showclicks: showclicks,
+		clickvalue: clickvalue,
+		clickget: clickget,
+		ccl: ccl,
+		cclc: cclc,
+		cnedeed: cnedeed,
+		//
+		click1cost: click1cost,
+		click2cost: click2cost,
+		click3cost: click3cost,
+		//
+		click1val: click1val,
+		click2val: click2val,
+		c3val: c3val,
+		//
+		click1boost: click1boost,
+		click2boost: click2boost,
+		click3boost: click3boost
 		};
 	localStorage.setItem("saveGame", JSON.stringify(saveGame));
 }
@@ -563,7 +669,7 @@ function GameSave() {
 
 function lkGame() {
 	var savedGame = JSON.parse(localStorage.getItem("saveGame"));
-	if (typeof savedGame.nothing !== "undefined") Nothing = savedGame.nothing;	
+	if (typeof savedGame.Nothing !== "undefined") Nothing = savedGame.Nothing;	
 	if (typeof savedGame.nget !== "undefined") nget = savedGame.nget;	
 	if (typeof savedGame.gen1 !== "undefined") gen1 = savedGame.gen1;	 
 	if (typeof savedGame.gen1val !== "undefined") gen1val = savedGame.gen1val;	
@@ -623,6 +729,7 @@ function lkGame() {
 	if (typeof savedGame.dotx !== "undefined") dotx = savedGame.dotx;	
 	if (typeof savedGame.dotget !== "undefined") dotget = savedGame.dotget;
 	if (typeof savedGame.showdots !== "undefined") showdots = savedGame.showdots;	
+	if (typeof savedGame.showclicks !== "undefined") showclicks = savedGame.showclicks;
 	//
 	if (typeof savedGame.dot1cost !== "undefined") dot1cost = savedGame.dot1cost;	
 	if (typeof savedGame.dot1val !== "undefined") dot1val = savedGame.dot1val;
@@ -635,6 +742,28 @@ function lkGame() {
 	if (typeof savedGame.dot3cost !== "undefined") dot3cost = savedGame.dot3cost;	
 	if (typeof savedGame.dot3val !== "undefined") dot3val = savedGame.dot3val;
 	//
+	if (typeof savedGame.dot4val !== "undefined") dot4val = savedGame.dot4val;
+	if (typeof savedGame.dot4p !== "undefined") dot4p = savedGame.dot4p;
+	//
+	if (typeof savedGame.showclicks !== "undefined") showclicks = savedGame.showclicks;
+	if (typeof savedGame.clickvalue !== "undefined") clickvalue = savedGame.clickvalue;
+	if (typeof savedGame.clickget !== "undefined") clickget = savedGame.clickget;
+	if (typeof savedGame.ccl !== "undefined") ccl = savedGame.ccl;
+	if (typeof savedGame.cclc !== "undefined") cclc = savedGame.cclc;
+	if (typeof savedGame.cnedeed !== "undefined") cnedeed = savedGame.cnedeed;
+	//
+	if (typeof savedGame.click1cost !== "undefined") click1cost = savedGame.click1cost;
+	if (typeof savedGame.click2cost !== "undefined") click2cost = savedGame.click2cost;
+	if (typeof savedGame.click3cost !== "undefined") click3cost = savedGame.click3cost;
+	//
+	if (typeof savedGame.click1val !== "undefined") click1val = savedGame.click1val;
+	if (typeof savedGame.click2val !== "undefined") click2val = savedGame.click2val;
+	if (typeof savedGame.c3val !== "undefined") c3val = savedGame.c3val;
+	//
+	if (typeof savedGame.click1boost !== "undefined") click1boost = savedGame.click1boost;
+	if (typeof savedGame.click2boost !== "undefined") click2boost = savedGame.click2boost;
+	if (typeof savedGame.click3boost !== "undefined") click3boost = savedGame.click3boost;
+	
 	if (gen2vis > 0) {
 		gen2bg.style.display = "block";
 	}
@@ -663,8 +792,16 @@ function lkGame() {
 		gen8bg.style.display = "block";
 	}
 	
-	if (showdots > 0) {
+	if (new Decimal(showdots).gt("0")) {
 		dots.style.display = "block";
+	}
+	
+	if (showclicks > 0) {
+		document.getElementById("clicks").style.display = "block";
+	}
+
+	if (new Decimal(c3val).gt("0")) {
+		int12 = setInterval("autobuy()", 500)
 	}
 
 }
@@ -724,6 +861,24 @@ function updateVars() {
 	document.getElementById("dot3cost").innerHTML = new Decimal(dot3cost).toPrecision(3);
 	document.getElementById("dot3val").innerHTML = new Decimal(dot3val).toPrecision(3);
 	//
+	document.getElementById("clickvalue").innerHTML = new Decimal(clickvalue).toPrecision(3);
+	document.getElementById("clickget").innerHTML = new Decimal(clickget).toPrecision(3);
+	document.getElementById("ccl").innerHTML = new Decimal(ccl).toPrecision(3);
+	document.getElementById("cclc").innerHTML = new Decimal(cclc).toPrecision(3);
+	document.getElementById("cnedeed").innerHTML = new Decimal(cnedeed).toPrecision(3);
+	//
+	document.getElementById("dot4val").innerHTML = dot4val;
+	//
+	document.getElementById("click1cost").innerHTML = new Decimal(click1cost).toPrecision(3);
+	document.getElementById("click2cost").innerHTML = new Decimal(click2cost).toPrecision(3);
+	document.getElementById("click3cost").innerHTML = new Decimal(click3cost).toPrecision(3);
+	//
+	document.getElementById("click1val").innerHTML = new Decimal(click1val).toPrecision(3);
+	document.getElementById("click2val").innerHTML = new Decimal(click2val).toPrecision(3);
+	//
+	document.getElementById("click1boost").innerHTML = new Decimal(click1boost).toPrecision(3);
+	document.getElementById("click2boost").innerHTML = new Decimal(click2boost).toPrecision(3);
+	document.getElementById("click3boost").innerHTML = click3boost;
 }
 
 window.onload = function() {
@@ -750,6 +905,7 @@ window.onload = function() {
 	int7 = setInterval("gen6nget()", tickspeed);
 	int8 = setInterval("gen7nget()", tickspeed);
 	int9 = setInterval("gen8nget()", tickspeed);
+	genN();
 }
 
 setInterval("GameSave()", 1000)
@@ -762,8 +918,8 @@ function visibleGen() {
 	}
 	
 	if (new Decimal(gen2val).gte("1")) {
-		gen3bg.style.display = "block";
-		gen3vis = 1
+		gen2bg.style.display = "block";
+		gen2vis = 1
 	}
 	
 	if (new Decimal(gen3val).gte("1")) {
@@ -791,8 +947,16 @@ function visibleGen() {
 		gen8vis = 1
 	}
 	
-	if (showdots > 0) {
+	if (new Decimal(showdots).gt("0")) {
 		dots.style.display = "block";
+	}
+	
+	if (showclicks > 0) {
+		document.getElementById("clicks").style.display = "block";
+	}
+	
+	if (new Decimal(c3val).gt("0")) {
+		int12 = setInterval("autobuy()", 500)
 	}
 	
 }
@@ -802,9 +966,9 @@ function deleteSave() {
 	var savedGame = JSON.parse(localStorage.getItem("saveGame"));
 if (answer) {
 	
-	showdots = 0
+	var showdots = new Decimal("0")
 	
-    if (typeof savedGame.nothing !== "undefined") Nothing = 10;	
+    if (typeof savedGame.Nothing !== "undefined") Nothing = 10;	
 	if (typeof savedGame.nget !== "undefined") nget = 0;	
 	if (typeof savedGame.gen1 !== "undefined") gen1 = 0;	 
 	if (typeof savedGame.gen1val !== "undefined") gen1val = 0;	
@@ -863,6 +1027,7 @@ if (answer) {
 	if (typeof savedGame.dot !== "undefined") dot = 0;	
 	if (typeof savedGame.dotget !== "undefined") dotget = 0;	
 	if (typeof savedGame.showdots !== "undefined") showdots = 0;
+	if (typeof savedGame.showclicks !== "undefined") showclicks = 0;
 	//
 	if (typeof savedGame.dot1cost !== "undefined") dot1cost = 10;	
 	if (typeof savedGame.dot1val !== "undefined") dot1val = 0;	
@@ -875,6 +1040,26 @@ if (answer) {
 	if (typeof savedGame.dot3cost !== "undefined") dot3cost = 5;	
 	if (typeof savedGame.dot3val !== "undefined") dot3val = 0;	
 	//
+	if (typeof savedGame.dot4val !== "undefined") dot4val = "Not Purchased";
+	if (typeof savedGame.dot4p !== "undefined") dot4p = 0;
+	//
+	if (typeof savedGame.clickget !== "undefined") clickget = 1;	
+	if (typeof savedGame.clickvalue !== "undefined") clickvalue = 0;	
+	if (typeof savedGame.ccl !== "undefined") ccl = 1;	
+	if (typeof savedGame.cclc !== "undefined") cclc = 0;	
+	if (typeof savedGame.cnedeed !== "undefined") cnedeed = 4;	
+	//
+	if (typeof savedGame.click1cost !== "undefined") click1cost = 1000;
+	if (typeof savedGame.click2cost !== "undefined") click2cost = 10000;	
+	if (typeof savedGame.click3cost !== "undefined") click3cost = 100000;	
+	//
+	if (typeof savedGame.click1val !== "undefined") click1val = 0;
+	if (typeof savedGame.click2val !== "undefined") click2val = 0;	
+	if (typeof savedGame.c3val !== "undefined") c3val = 0;	
+	//
+	if (typeof savedGame.click1boost !== "undefined") click1boost = 1;
+	if (typeof savedGame.click2boost !== "undefined") click2boost = 1;	
+	if (typeof savedGame.click3boost !== "undefined") click3boost = "Not Purchased";	
 	updateVars();
 	gen2bg.style.display = "none";
 	gen3bg.style.display = "none";
@@ -883,12 +1068,23 @@ if (answer) {
 	gen6bg.style.display = "none";
 	gen7bg.style.display = "none";
 	gen8bg.style.display = "none";
-	if (showdots = 0) {
+	
+	document.getElementById("dots").style.display = "none";
+	
+	var showdots = new Decimal("0")
+	
+	if (new Decimal(showdots).eq("0")) {
 		dots.style.display = "none";
+	}
+	
+	if (showclicks = 0) {
+		document.getElementById("clicks").style.display = "block";
 	}
 	document.getElementById("madot").style.display = "none";
 	
 	 location.reload();
+	 
+	document.getElementById("dots").style.display = "none";
 	
 }
 else {
@@ -915,7 +1111,7 @@ function impsave() {
 	const raw = JSON.parse(b64_to_utf8(valueforimp));
 	const savedGame = JSON.parse(raw);
 	console.log(savedGame)
-	if (typeof savedGame.nothing !== "undefined") Nothing = savedGame.nothing;	
+	if (typeof savedGame.Nothing !== "undefined") Nothing = savedGame.Nothing;	
 	if (typeof savedGame.nget !== "undefined") nget = savedGame.nget;	
 	if (typeof savedGame.gen1 !== "undefined") gen1 = savedGame.gen1;	 
 	if (typeof savedGame.gen1val !== "undefined") gen1val = savedGame.gen1val;	
@@ -975,6 +1171,7 @@ function impsave() {
 	if (typeof savedGame.dotx !== "undefined") dotx = savedGame.dotx;	
 	if (typeof savedGame.dotget !== "undefined") dotget = savedGame.dotget;
 	if (typeof savedGame.showdots !== "undefined") showdots = savedGame.showdots;
+	if (typeof savedGame.showclicks !== "undefined") showclicks = savedGame.showclicks;
 	//
 	if (typeof savedGame.dot1cost !== "undefined") dot1cost = savedGame.dot1cost;	
 	if (typeof savedGame.dot1val !== "undefined") dot1val = savedGame.dot1val;
@@ -987,6 +1184,26 @@ function impsave() {
 	if (typeof savedGame.dot3cost !== "undefined") dot3cost = savedGame.dot3cost;	
 	if (typeof savedGame.dot3val !== "undefined") dot3val = savedGame.dot3val;
 	//
+	if (typeof savedGame.dot4val !== "undefined") dot4val = savedGame.dot4val;
+	if (typeof savedGame.dot4p !== "undefined") dot4p = savedGame.dot4p;
+	//
+	if (typeof savedGame.clickvalue !== "undefined") clickvalue = savedGame.clickvalue;
+	if (typeof savedGame.clickget !== "undefined") clickget = savedGame.clickget;
+	if (typeof savedGame.ccl !== "undefined") ccl = savedGame.ccl;
+	if (typeof savedGame.cclc !== "undefined") cclc = savedGame.cclc;
+	if (typeof savedGame.cnedeed !== "undefined") cnedeed = savedGame.cnedeed;
+	//
+	if (typeof savedGame.click1cost !== "undefined") click1cost = savedGame.click1cost;
+	if (typeof savedGame.click2cost !== "undefined") click2cost = savedGame.click2cost;
+	if (typeof savedGame.click3cost !== "undefined") click3cost = savedGame.click3cost;
+	//
+	if (typeof savedGame.click1val !== "undefined") click1val = savedGame.click1val;
+	if (typeof savedGame.click2val !== "undefined") click2val = savedGame.click2val;
+	if (typeof savedGame.c3val !== "undefined") c3val = savedGame.c3val;
+	//
+	if (typeof savedGame.click1boost !== "undefined") click1boost = savedGame.click1boost;
+	if (typeof savedGame.click2boost !== "undefined") click2boost = savedGame.click2boost;
+	if (typeof savedGame.click3boost !== "undefined") click3boost = savedGame.click3boost;
 	if (gen2vis > 0) {
 		gen2bg.style.display = "block";
 	}
@@ -1015,8 +1232,16 @@ function impsave() {
 		gen8bg.style.display = "block";
 	}
 	
-	if (showdots > 0) {
+	if (new Decimal(showdots).gt("0")) {
 		dots.style.display = "block";
+	}
+	
+	if (new Decimal(showclicks).eq("1")) {
+		document.getElementById("clicks").style.display = "block";
+	}
+	
+	if (new Decimal(c3val).gt("0")) {
+		int12 = setInterval("autobuy()", 500)
 	}
 	
 	updateVars();
@@ -1029,6 +1254,7 @@ function impsave() {
 	gen7bg.style.display = "none";
 	gen8bg.style.display = "none";
 	visibleGen()
+	genN()
 }
 
 function tweaksbugs() {
@@ -1039,3 +1265,8 @@ function tweaksbugs() {
 
 setInterval("tweaksbugs()", 100);
 
+ if (new Decimal(Nothing).gte("1e40")) {
+	 if (new Decimal(showmadot).eq("0")) {
+		 document.getElementById("madot").style.display = "none";
+	 }
+}

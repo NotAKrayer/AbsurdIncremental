@@ -185,3 +185,13 @@ function gen8max() {
     gen8bg.style.background = "transparent";
     gen8bg.style.cursor = "default";
 }
+
+function MaxKeyPress(event) {
+    // Check if the pressed key is the 'M' key (both uppercase and lowercase)
+    if (event.key === 'M' || event.key === 'm') {
+        // Call your 'max' function
+        maxgen();
+    }
+}
+
+document.addEventListener('keydown', MaxKeyPress);
