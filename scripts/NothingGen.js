@@ -494,7 +494,7 @@ function autobuy() {
     document.getElementById("gen1val").innerHTML = gen1val.toPrecision(3);
 	gen2vis = 1
   }
- if (Nothing.gte(gen2cost)) {
+ if (new Decimal(Nothing).gte(gen2cost)) {
     gen2 = Decimal.add(gen2, "1");
     gen2val = Decimal.add(gen2val, "1");
     Nothing = Decimal.minus(Nothing, gen2cost);
@@ -504,7 +504,7 @@ function autobuy() {
     document.getElementById("gen2val").innerHTML = gen2val.toPrecision(3);
 	gen3vis = 1
   }
-  if (Nothing.gte(gen3cost)) {
+  if (new Decimal(Nothing).gte(gen3cost)) {
     gen3 = Decimal.add(gen3, "1");
     gen3val = Decimal.add(gen3val, "1");
     Nothing = Decimal.minus(Nothing, gen3cost);
@@ -514,7 +514,7 @@ function autobuy() {
     document.getElementById("gen3val").innerHTML = gen3val.toPrecision(3);
 	gen4vis = 1
   }
-  if (Nothing.gte(gen4cost)) {
+  if (new Decimal(Nothing).gte(gen4cost)) {
     gen4 = Decimal.add(gen4, "1");
     gen4val = Decimal.add(gen4val, "1");
     Nothing = Decimal.minus(Nothing, gen4cost);
@@ -524,7 +524,7 @@ function autobuy() {
     document.getElementById("gen4val").innerHTML = gen4val.toPrecision(3);
 	gen5vis = 1
   }
-  if (Nothing.gte(gen5cost)) {
+  if (new Decimal(Nothing).gte(gen5cost)) {
     gen5 = Decimal.add(gen5, "1");
     gen5val = Decimal.add(gen5val, "1");
     Nothing = Decimal.minus(Nothing, gen5cost);
@@ -534,7 +534,7 @@ function autobuy() {
     document.getElementById("gen5val").innerHTML = gen5val.toPrecision(3);
 	gen6vis = 1
   }
-	if (Nothing.gte(gen6cost)) {
+	if (new Decimal(Nothing).gte(gen6cost)) {
     gen6 = Decimal.add(gen6, "1");
     gen6val = Decimal.add(gen6val, "1");
     Nothing = Decimal.minus(Nothing, gen6cost);
@@ -543,7 +543,7 @@ function autobuy() {
 	document.getElementById("gen6cost").innerHTML = new Decimal(gen6cost).toPrecision(3);
     document.getElementById("gen6val").innerHTML = gen6val.toPrecision(3);
   }
-  if (Nothing.gte(gen7cost)) {
+  if (new Decimal(Nothing).gte(gen7cost)) {
     gen7 = Decimal.add(gen7, "1");
     gen7val = Decimal.add(gen7val, "1");
     Nothing = Decimal.minus(Nothing, gen7cost);
@@ -554,7 +554,7 @@ function autobuy() {
 	gen7vis = 1
   }
 
-  if (Nothing.gte(gen8cost)) {
+  if (new Decimal(Nothing).gte(gen8cost)) {
     gen8 = Decimal.add(gen8, "1");
     gen8val = Decimal.add(gen8val, "1");
     Nothing = Decimal.minus(Nothing, gen8cost);
